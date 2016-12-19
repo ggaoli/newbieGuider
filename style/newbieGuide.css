@@ -1,0 +1,499 @@
+@charset "utf-8";
+.clearfix:after{ content:""; height:0; visibility:hidden; display:block; clear:both;}
+.clearfix{ zoom:1;}
+#newbie-guide-content{
+  display: none;
+}
+#newbie-pic-step{
+  display: none;
+}
+#jpwNext,
+#jpwPrevious,
+#jpwFinish{
+  margin-top:20px;
+}
+#jpwClose,
+#jpwNext,
+#jpwPrevious,
+#jpwFinish {
+  color: white;
+  cursor: pointer;
+  font-family: '微软雅黑', serif;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+}
+#jpwClose:hover{
+  color:#2498ff;
+  text-decoration: none;
+}
+#jpwFinish:hover{
+  text-decoration: none;
+}
+#jpwOverlay.transparent {
+  background: none;
+  _background: none;
+  _display: none ;
+  display: none;
+  _top:10000px;
+  _z-index: 0;
+}
+
+#jpwOverlay {
+  background: url(../images/step/guider_bg.png) repeat;
+  position: fixed;
+  _position:absolute;
+  z-index: 999999;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.jpw-scrolling .overlay-hole > div {
+  box-shadow: inset 0 0 10px 1000px rgba(0, 0, 0, 0.6) !important;
+}
+#jpWalkthrough .overlay-hole > div {
+  box-shadow: inset 0 0 5px 5px rgba(0, 0, 0, 0.6);
+}
+#jpWalkthrough #jpwTooltip {
+  overflow: visible;
+  width: auto;
+  *background: none;
+  padding: 10px 20px 0;
+  padding:20px 20px 0\9;
+  *padding:20px 20px 0;
+}
+@media screen and(min-width: 0px) {
+  #jpWalkthrough #jpwTooltip{
+    padding:0;
+  }
+}
+#jpWalkthrough #jpwTooltip #tooltipWrapper {
+  overflow: visible;
+}
+
+#jpWalkthrough .ie6-jpwTooltip{
+  position: absolute !important;
+  left: 50%;
+  top: 25%;
+}
+#jpWalkthrough #jpwTooltip .top {
+  background: url("../images/step/arrow-top-blue.png") no-repeat;
+  *background:url("../images/step/arrow-top-blue.png") no-repeat ;
+  bottom: -90px;
+  *bottom: -90px;
+  height: 86px;
+  left: 130px;
+  position: absolute;
+  width: 75px;
+  display: block;
+  z-index: 1000;
+}
+@media screen and (min-width: 0px) {
+  #jpWalkthrough #jpwTooltip .top{
+    background: url("../images/step/jt-up.png") no-repeat scroll 0 0 transparent !important;
+    bottom: -72px;
+  }
+}
+#jpWalkthrough #jpwTooltip .right {
+  background: url("../images/step/arrow-right-blue.png") no-repeat;
+  *background:url("../images/step/arrow-right-blue.png") no-repeat ;
+  height: 56px;
+  left: -50px;
+  *left: -50px;
+  position: absolute;
+  top: 35px;
+  width: 105px;
+  display: block;
+  z-index: 1000;
+}
+@media screen and (min-width: 0px) {
+  #jpWalkthrough #jpwTooltip .right{
+    left: -68px;
+    background: url("../images/step/jt-right.png") no-repeat scroll 0 0 transparent !important;
+  }
+}
+#jpWalkthrough #jpwTooltip .bottom {
+
+  background:url("../images/step/arrow-bottom-blue.png") no-repeat ;
+  *background:url("../images/step/arrow-bottom-blue.png") no-repeat ;
+  height: 65px;
+  left: 130px;
+  position: absolute;
+  top: -40px;
+  *top: -40px;
+  width: 75px;
+  display: block;
+  z-index: 1000;
+}
+@media screen and (min-width: 0px) {
+  #jpWalkthrough #jpwTooltip .bottom{
+    top: -63px;
+    background: url("../images/step/jt-down.png") no-repeat scroll 0 0 transparent;
+  }
+}
+#jpWalkthrough #jpwTooltip .left {
+  background:url("../images/step/arrow-left-blue.png") no-repeat;
+  *background:url("../images/step/arrow-left-blue.png") no-repeat;
+  height: 56px;
+  position: absolute;
+  right: -50px;
+  *right: -50px;
+  top: 35px;
+  width: 70px;
+  display: block;
+  z-index: 1000;
+}
+@media screen and (min-width: 0px) {
+  #jpWalkthrough #jpwTooltip .left{
+    background: url("../images/step/jt-left.png") no-repeat scroll 0 0 transparent;
+    right: -70px;
+  }
+
+}
+#jpWalkthrough #jpwTooltip #tooltipInner {
+  font-family: '微软雅黑', serif;
+  color: #333;
+  *color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+@media screen and (min-width: 0px) {
+  #jpWalkthrough #jpwTooltip #tooltipInner{
+    color: #ffffff;
+    background: none;
+  }
+
+}
+#jpWalkthrough #jpwTooltip #tooltipInner a {
+  /*font-size: 22px;*/
+}
+#jpWalkthrough #jpwTooltip #tooltipInner .tooltipTitle {
+  font-size: 32px;
+}
+#jpWalkthrough .killOverlay {
+  background:none !important;
+  background-color:transparent !important; ;
+}
+#jpWalkthrough .overlay-hole{
+  -webkit-box-shadow: 0 0 1px 10000px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 1px 10000px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 1px 10000px rgba(0, 0, 0, 0.6);
+  border:2px solid #FD3301;
+  *border:2px solid #FD3301;
+}
+@media screen and (min-width: 0px) {
+  #jpWalkthrough .overlay-hole{
+    border:none !important;
+  }
+}
+#jpwClose {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  z-index: 1000000;
+  color: #ffffff;
+  text-align: center;
+  display: block;
+}
+#jpwClose i{
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 30px;
+  height: 27px;
+  background: url("../images/step/close-blue.png") -2px -2px no-repeat;
+  *background: url("../images/step/close-blue.png") -2px -2px no-repeat;
+  position: absolute;
+  top: -18px;
+  *top: -18px;
+  left: -15px;
+  *left: -15px;
+  border:none;
+  *border:none;
+  border-radius: 100%;
+}
+@media screen and (min-width: 0px) {
+  #jpwClose i{
+    top: -34px;
+    left: 5px;
+    border: 2px solid #fff;
+    background: url("../images/step/close.png") 0 -2px no-repeat;
+  }
+}
+#jpwClose:hover {
+  color:#2498ff;
+
+}
+#jpwClose:hover i{
+  border-color:#CD5C5C;
+  background: url("../images/step/close-blue.png") 0 -2px no-repeat;
+}
+#jpwNext,
+#jpwFinish {
+  float: right;
+}
+
+#jpwNext,#jpwPrevious,#jpwFinish,#jpwStart{
+  display: block;
+  padding: 5px 0;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  font-family: "微软雅黑", serif;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  margin-bottom: 20px;
+  width: 80px;
+  background: #2498ff;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #2898fd;
+  *margin-top: 0;
+}
+#jpwNext:hover,#jpwPrevious:hover ,#jpwFinish:hover,#jpwStart:hover{
+  box-shadow: inset -2px -3px 5px rgba(0, 0, 0, 0.125);
+  -webkit-box-shadow: inset -3px -2px 5px rgba(0, 0, 0, 0.125);
+  -ms-box-shadow: inset -2px -3px 5px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: inset -2px -3px 5px rgba(0, 0, 0, 0.125);
+  -o-box-shadow: inset -2px -3px 5px rgba(0, 0, 0, 0.125);
+  outline: none;
+  background: #1a7bff;
+  border: 1px solid #2898fd;
+}
+#jpwPrevious {
+  float: left;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+
+  background: white;
+  *background: white;
+  color: #666;
+  *color: #666;
+  border:1px solid #d9d9d9;
+  *border:1px solid #d9d9d9;
+  margin-left: 15px;
+}
+@media screen and (min-width: 0px) {
+  #jpwPrevious{
+    background: none;
+    color: white;
+    border:1px solid white;
+  }
+}
+#jpwNext{
+  margin-right: 15px;
+}
+#jpwPrevious:hover{
+  *color: #fff;
+}
+@media screen and (min-width: 0px) {
+
+}
+#jpwFinish{
+  margin-right: 15px;
+}
+#jpwStart{
+  position: absolute;
+  top: 69%;
+  color: white;
+  border: 1px solid #2498ff;
+  padding: 10px 20px;
+  left: 50%;
+  background: #2898fd;
+  font-size: 16px;
+  margin-left: -61px;
+}
+
+#jpWalkthrough #jpwTooltip #tooltipInner .first-modal{
+  background: url(../images/step/welcome.png) center center no-repeat;
+  height: 370px;
+  text-align: center;
+  _background:url(../images/step/welcome.gif) center center no-repeat;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner .first-modal .first-modal-desc{
+  position: relative;
+  background: none;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner .next-desc img{
+  display: none;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner .next-desc p{
+
+  font-size: 17px;
+  *font-size: 17px;
+  color: #333;
+  *color: #333;
+  line-height: 25px;
+  padding: 20px 15px 0;
+  *padding: 20px 15px 0;
+  text-align: left;
+}
+@media screen and (min-width: 0px) {
+  #jpWalkthrough #jpwTooltip #tooltipInner .next-desc p{
+    font-size: 16px;
+    padding: 66px 70px 0 80px;
+    color: #fff;
+  }
+}
+#jpWalkthrough #jpwTooltip #tooltipInner .first-modal h2{
+  font-size: 27px;
+  color: #2898fd;
+  padding-top: 90px;
+  font-weight: normal;
+  margin:0 auto;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner .first-modal span{
+  font-size: 36px;
+  color: #2898fd;
+  font-weight: bold;
+  padding-top: 15px;
+  display: block;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner .first-modal span b{
+  color: #FF3300;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner .first-modal p{
+  color: #aaa;
+  /*color: #333\0;*/
+  *color: #333;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+
+
+#jpWalkthrough #jpwTooltip #tooltipInner .next-desc{
+  height:auto;
+  *height:auto;
+  background: white;
+  *background: white;
+  padding:10px 20px;
+  *padding:10px 20px;
+  border:1px solid #d9d9d9;
+  *border:1px solid #d9d9d9;
+  border-bottom: none;
+}
+@media screen and (min-width: 0px) {
+  #jpWalkthrough #jpwTooltip #tooltipInner .next-desc{
+    height: 250px;
+    background: inherit;
+    padding: inherit;
+    border:inherit;
+  }
+}
+#tooltipBtn{
+  background: white;
+  *background: white;
+  border:1px solid #d9d9d9;
+  *border:1px solid #d9d9d9;
+  border-top:none;
+}
+@media screen and (min-width: 0px) {
+  #tooltipBtn{
+    background: inherit;
+    border:inherit;
+  }
+}
+#toolTipNum{
+  display: block;
+  *display: block;
+  text-align: center;
+  background: white;
+  font-size: 14px;
+  font-family: "微软雅黑‘", "Lucida Grande", Tahoma, serif;
+  height: 20px;
+  line-height: 20px;
+  border:1px solid #d9d9d9;
+  border-top: none;
+  border-bottom: none;
+}
+@media screen and (min-width: 0px) {
+  #toolTipNum{
+    display: none;
+  }
+}
+#toolTipNum .indexNum{
+  color: #333;
+  font-weight: bold;
+}
+#toolTipNum .numFull{
+  color: #999;
+  font-weight: bold;
+}
+
+#jpWalkthrough #jpwTooltip #tooltipInner .next-all-box1{
+  background: white;
+  *background: white;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner .next-all-box2{
+  background: white;
+  *background: white;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner .next-all-box3{
+  background: white;
+  *background: white;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner .next-all-box4{
+  background: white;
+  *background: white;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner .next-all-box5{
+  background: white;
+  *background: white;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner .next-all-box6{
+  background: white;
+  *background: white;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner .next-all-box7{
+  background: white;
+  *background: white;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner .next-all-box8{
+  background: white;
+  *background: white;
+}
+#jpWalkthrough #jpwTooltip #tooltipInner .next-all-box9{
+  background: white;
+  *background: white;
+}
+@media screen and (min-width: 0px) {
+  #jpWalkthrough #jpwTooltip #tooltipInner .next-all-box1{
+    background: url(../images/step/1.png) center center no-repeat;
+  }
+  #jpWalkthrough #jpwTooltip #tooltipInner .next-all-box2{
+    background: url(../images/step/2.png) center center no-repeat;
+  }
+  #jpWalkthrough #jpwTooltip #tooltipInner .next-all-box3{
+    background: url(../images/step/3.png) center center no-repeat;
+  }
+  #jpWalkthrough #jpwTooltip #tooltipInner .next-all-box4{
+    background: url(../images/step/4.png) center center no-repeat;
+  }
+  #jpWalkthrough #jpwTooltip #tooltipInner .next-all-box5{
+    background: url(../images/step/5.png) center center no-repeat;
+  }
+  #jpWalkthrough #jpwTooltip #tooltipInner .next-all-box6{
+    background: url(../images/step/6.png) center center no-repeat;
+  }
+  #jpWalkthrough #jpwTooltip #tooltipInner .next-all-box7{
+    background: url(../images/step/7.png) center center no-repeat;
+  }
+  #jpWalkthrough #jpwTooltip #tooltipInner .next-all-box8{
+    background: url(../images/step/8.png) center center no-repeat;
+  }
+  #jpWalkthrough #jpwTooltip #tooltipInner .next-all-box9{
+    background: url(../images/step/9.png) center center no-repeat;
+  }
+}
